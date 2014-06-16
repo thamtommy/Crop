@@ -28,9 +28,9 @@ class Crop:
         elif self._growth > 5:
             self._status = 'Young'
         elif self._growth > 0:
-            self._growth = 'Seedling'
+            self._status = 'Seedling'
         elif self._growth == 0:
-            self._growth = 'Seed'
+            self._status = 'Seed'
 
     def grow(self,light,water):
         if (light >= self._light_need) and (water >= self._water_need):
