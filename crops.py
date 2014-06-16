@@ -27,14 +27,14 @@ def create_crop():
     display_menu()
     choice = select_option()
     if choice == 1:
-        new_crop == Potato()
+        new_crop = Potato()
     elif choice == 2:
-        new_crop = Wheat)_
+        new_crop = Wheat()
     return new_crop
 
 def main():
     new_crop = create_crop()
     manage_crop(new_crop)
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
