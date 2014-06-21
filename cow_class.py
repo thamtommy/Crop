@@ -2,8 +2,8 @@ from animal_class import *
 
 class Cow(Animal):
     """A cow """
-    def __init__(self):
-        super().__init__(1,7,7)
+    def __init__(self,name):
+        super().__init__(1,7,7,name)
         self._type = "Cow"
         self._weight = 0
 
@@ -21,9 +21,21 @@ class Cow(Animal):
         self._days_growing += 1
         self._update_status()
 
+def get_name():
+    valid = False
+    while not valid:
+        name = input("Please enter a name: ")
+        if len(name) > 0:
+            valid = True
+        else:
+            print("Please enter a name. ")
+    return name
+
 def main():
     #create a new potato crop
-    cow_one = Cow()
+    name = get_name()
+    cow_one = Cow(name)
+    
     print(cow_one.report())
 
     manual_grow(cow_one)
