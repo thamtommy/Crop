@@ -97,15 +97,7 @@ def get_menu_choice():
             print("Please enter a valid option")
     return choice
 
-def get_name():
-    valid = False
-    while not valid:
-        name = input("Please enter a name: ")
-        if len(name) > 0:
-            valid = True
-        else:
-            print("Please enter a name. ")
-    return name
+
 
 def manage_animal(animal):
     print("This is the crop management program")
@@ -130,7 +122,7 @@ def manage_animal(animal):
 
 def main():
     #instantiate the class
-    name = get_name()
+    name = None
     new_animal = Animal(1,7,7, name) #1 growth_rate, 4 food_need, 3 water_need
     
     
