@@ -301,7 +301,7 @@ def add_animal_to_field(field):
             print("Field is full - cow not added")
             print()
     elif choice == 2:
-        name = get_cow_name()
+        name = get_sheep_name()
         if field.add_animal(Sheep(name)):
             print()
             print("Animal added.")
